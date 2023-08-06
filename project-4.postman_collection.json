@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "b53dd845-3e53-4cab-9d35-9766ee7713eb",
+		"name": "project-4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"thiennlnt\",\r\n    \"password\": \"thiennlntadmin\",\r\n    \"confirmPassword\": \"thiennlntadmin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8889/api/user/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8889",
+					"path": [
+						"api",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"thiennlnt\",\r\n    \"password\": \"thiennlntadmin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8889/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8889",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0aGllbm5sbnQiLCJleHAiOjE2OTIxNTgzNzF9.bZQtHjQnW0QOquBe8gkhBwwadIFQ_OZqpVKPv6q-qcKDhptyi6GnzA_zGmVaDX9PfTBeOiwJMOiGQsFgKLGlyA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"thiennlnt\",\r\n    \"password\": \"thiennlntadmin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8889/api/user/thiennlnt",
+					"host": [
+						"localhost"
+					],
+					"port": "8889",
+					"path": [
+						"api",
+						"user",
+						"thiennlnt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add to cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0aGllbm5sbnQiLCJleHAiOjE2OTIxNTgzNzF9.bZQtHjQnW0QOquBe8gkhBwwadIFQ_OZqpVKPv6q-qcKDhptyi6GnzA_zGmVaDX9PfTBeOiwJMOiGQsFgKLGlyA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8889/api/cart/addToCart",
+					"host": [
+						"localhost"
+					],
+					"port": "8889",
+					"path": [
+						"api",
+						"cart",
+						"addToCart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0aGllbm5sbnQiLCJleHAiOjE2OTIxNTgzNzF9.bZQtHjQnW0QOquBe8gkhBwwadIFQ_OZqpVKPv6q-qcKDhptyi6GnzA_zGmVaDX9PfTBeOiwJMOiGQsFgKLGlyA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8889/api/order/submit/thiennlnt",
+					"host": [
+						"localhost"
+					],
+					"port": "8889",
+					"path": [
+						"api",
+						"order",
+						"submit",
+						"thiennlnt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "history",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0aGllbm5sbnQiLCJleHAiOjE2OTIxNTgzNzF9.bZQtHjQnW0QOquBe8gkhBwwadIFQ_OZqpVKPv6q-qcKDhptyi6GnzA_zGmVaDX9PfTBeOiwJMOiGQsFgKLGlyA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8889/api/order/history/thiennlnt",
+					"host": [
+						"localhost"
+					],
+					"port": "8889",
+					"path": [
+						"api",
+						"order",
+						"history",
+						"thiennlnt"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
